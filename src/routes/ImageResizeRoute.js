@@ -22,7 +22,7 @@ router.get('/images/:name', async (ctx) => {
         format = 'jpeg';
     }
 
-    const response = await API.async({"Content-Type": "image/webp"}, `http://localhost:3000${url}`);
+    const response = await API.async({"Content-Type": "image/webp"}, `http://storage.mingi.kr${url}`);
 
     let resizedImageFile = response.data;
 
