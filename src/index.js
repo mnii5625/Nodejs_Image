@@ -34,6 +34,6 @@ app.use(async(ctx, next) => {
 app.use(router.routes()).use(router.allowedMethods());
 app.use(ImageResizeRoute.routes()).use(ImageResizeRoute.allowedMethods());
 
-app.listen(4000, () => {
-    console.log('Storage Server is listening to port 4000');
+app.listen(1000, () => {
+    console.log('Storage Server is listening to port 1000');
 })
