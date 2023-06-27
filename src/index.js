@@ -13,6 +13,7 @@ app.use(async(ctx, next) => {
     try {
         await next();
     } catch (err) {
+        console.log(err);
         if (err.message === 'is.not.image.type') {
             ctx.status = 415;
             ctx.body = {
