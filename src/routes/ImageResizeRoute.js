@@ -47,6 +47,11 @@ router.get('/images/:name', async (ctx) => {
             .toFormat(format)
             .withMetadata()
             .toBuffer();
+    } else {
+        resizedImageFile = await sharp(resizedImageFile)
+          .toFormat(format)
+          .withMetadata()
+          .toBuffer();
     }
 
     ctx.set("Content-Type", `image/${format}`);
